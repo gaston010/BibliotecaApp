@@ -1,20 +1,20 @@
-{% extends 'header.html' %} 
+{% extends 'header.html' %}
 {% block content %}
-<div class="container my-5">
-  <h1 class="text-center">Crear Nuevo Prestamo de Libro</h1>
-  <form action="" method="post">
-    <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}" />
-    {{form}}
-    <span class="my-3 text-danger">
+    <div class="container my-5">
+        <h1 class="text-center">Crear Nuevo Prestamo de Libro</h1>
+        <form action="" method="post">
+            <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}"/>
+            {{ form }}
+            <span class="my-3 text-danger">
       * Recordatorio: Los prestamos,por defecto, deben ser devueltos hasta en un maximo de 2 dias ,desde de la fecha de realizacion del prestamo (se puede modificar la fecha limite del prestamo, si es necesario)</span>
-    <div class="my-2">
-      <button class="btn btn-success" type="submit">Crear</button>
+            <div class="my-2">
+                <button class="btn btn-success" type="submit">Crear</button>
+            </div>
+        </form>
+        <div class="mt-2">
+            <a class="btn btn-primary text-light" href="/home/prestamos">
+                Volver
+            </a>
+        </div>
     </div>
-  </form>
-  <div class="mt-2">
-    <a class="btn btn-primary text-light" class="" href="/home/prestamos">
-      Volver
-    </a>
-  </div>
-</div>
 {% endblock %}

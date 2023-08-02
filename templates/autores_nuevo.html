@@ -6,15 +6,15 @@
 
         <form action="" method="post">
             <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
-            {{form}}
+            {{ form }}
             <div class="my-2">
-            <button class="btn btn-success"type="submit">Crear</button>
+                <button class="btn btn-success" type="submit">Crear</button>
             </div>
         </form>
         <div class="mt-2">
-          <a class="btn btn-primary text-light" class="" href="/home/autores">
-            Volver
-          </a>
+            <a class="btn btn-primary text-light" href="/home/autores">
+                Volver
+            </a>
         </div>
     </div>
 {% endblock %}

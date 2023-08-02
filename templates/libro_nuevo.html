@@ -1,24 +1,24 @@
 {% extends 'header.html' %} {% block content %}
-<div class="container my-5">
-  <h1 class="text-center">Registrar un Nuevo Libro</h1>
+    <div class="container my-5">
+        <h1 class="text-center">Registrar un Nuevo Libro</h1>
 
-  <form action="" method="post">
-    <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}" />
-    {{form}}
-    <br />
-    <span class="my-3 text-warning">
+        <form action="" method="post">
+            <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}"/>
+            {{ form }}
+            <br/>
+            <span class="my-3 text-warning">
       * Recordatorio: El ISBN debe ser una cifra de 13 dígitos, entre
       1000000000000 y 9999999999999
     </span>
-    <p class="my-3 text-danger">{% if mensaje %} {{mensaje}} {% endif %}</p>
-    <div class="my-2">
-      <button class="btn btn-success" type="submit">Crear</button>
+            <p class="my-3 text-danger">{% if mensaje %} {{ mensaje }} {% endif %}</p>
+            <div class="my-2">
+                <button class="btn btn-success" type="submit">Crear</button>
+            </div>
+        </form>
+        <div class="mt-2">
+            <a class="btn btn-primary text-light" href="/home/libros">
+                Volver
+            </a>
+        </div>
     </div>
-  </form>
-  <div class="mt-2">
-    <a class="btn btn-primary text-light" class="" href="/home/libros">
-      Volver
-    </a>
-  </div>
-</div>
 {% endblock %}
